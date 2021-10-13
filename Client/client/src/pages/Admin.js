@@ -1,27 +1,42 @@
 import React, {useState} from 'react';
-import {Container} from "react-bootstrap";
+import {Button, Container} from "react-bootstrap";
 import CreateBrand from "../components/modals/CreateBrand";
 import CreateDevice from "../components/modals/CreateDevice";
 import CreateType from "../components/modals/CreateType";
 
-const admin = () => {
-    const [brandVisible, SetBrandVisible] = useState(false)
-    const [typeVisible, SetTypeVisible] = useState(false)
-    const [deviceVisible, SetDeviceVisible] = useState(false)
+const Admin = () => {
+    const [brandVisible, setBrandVisible] = useState(false)
+    const [typeVisible, setTypeVisible] = useState(false)
+    const [deviceVisible, setDeviceVisible] = useState(false)
+
     return (
         <Container className="d-flex flex-column">
-            <button variant={"outline-dark "} className="mt-4 p-2" onClick={()=>SetTypeVisible(true)}>добавить тип</button>
-            <button variant={"outline-dark "} className="mt-4 p-2" onClick={()=> SetDeviceVisible(true)}> добавить бренд</button>
-            <button variant={"outline-dark "} className="mt-4 -2"> добавить устройство</button>
-
-
-
-            <CreateBrand show={brandVisible} onHide={() => SetBrandVisible(false)}></CreateBrand>
-            <CreateDevice show={deviceVisible} onHide={() => SetDeviceVisible(false)}></CreateDevice>
-            <CreateType show={typeVisible} onHide={() => SetTypeVisible(false)}></CreateType>
+            <Button
+                variant={"outline-dark"}
+                className="mt-4 p-2"
+                onClick={() => setTypeVisible(true)}
+            >
+                Добавить тип
+            </Button>
+            <Button
+                variant={"outline-dark"}
+                className="mt-4 p-2"
+                onClick={() => setBrandVisible(true)}
+            >
+                Добавить бренд
+            </Button>
+            <Button
+                variant={"outline-dark"}
+                className="mt-4 p-2"
+                onClick={() => setDeviceVisible(true)}
+            >
+                Добавить устройство
+            </Button>
+            <CreateBrand show={brandVisible} onHide={() => setBrandVisible(false)}/>
+            <CreateDevice show={deviceVisible} onHide={() => setDeviceVisible(false)}/>
+            <CreateType show={typeVisible} onHide={() => setTypeVisible(false)}/>
         </Container>
-
     );
 };
 
-export default admin
+export default Admin;
