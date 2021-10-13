@@ -9,16 +9,9 @@ export const Context = createContext(null)
 ReactDOM.render(
     <Context.Provider value={{
         user: new UserStore(),
-        device:new DeviceStore(),
-
-
+        device: new DeviceStore(),
     }}>
-
-
-        <App/>
+        <App />
     </Context.Provider>,
     document.getElementById('root')
 );
-
-
-
