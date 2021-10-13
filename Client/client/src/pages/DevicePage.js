@@ -30,7 +30,7 @@ const DevicePage = () => {
                                 fontSize: 64
                             }}
                         >
-                            {device.rating}
+                            {device.reating}
                         </div>
                     </Row>
                 </Col>

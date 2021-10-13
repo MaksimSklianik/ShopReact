@@ -1,10 +1,13 @@
 import React from 'react';
+import {Container} from "react-bootstrap";
 
 const admin = () => {
     return (
-        <div>
-            ADMIN PAGE
-        </div>
+        <Container>
+            <button>добавить тип</button>
+            <button> добавить бренд</button>
+            <button> добавить устройство</button>
+        </Container>
     );
 };
 
