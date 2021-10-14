@@ -22,15 +22,9 @@ const DevicePage = () => {
                         <h2>{device.name}</h2>
                         <div
                             className="d-flex align-items-center justify-content-center"
-                            style={{
-                                background: `url(${bigStar}) no-repeat center center`,
-                                width: 240,
-                                height: 240,
-                                backgroundSize: 'cover',
-                                fontSize: 64
-                            }}
+                            style={{background: `url(${bigStar}) no-repeat center center`, width:240, height: 240, backgroundSize: 'cover', fontSize:64}}
                         >
-                            {device.reating}
+                            {device.rating}
                         </div>
                     </Row>
                 </Col>
